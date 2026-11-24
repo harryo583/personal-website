@@ -1,5 +1,8 @@
 ---
 import "../styles/global.css";
+
+const linkedinUrl = "https://www.linkedin.com/in/harry-wang-hongyi/";
+const githubUrl = "https://github.com/harryo583";
 ---
 
 <!doctype html>
@@ -9,15 +12,70 @@ import "../styles/global.css";
     <meta name="viewport" content="width=device-width" />
     <meta
       name="description"
-      content="A personal website—more coming soon."
+      content="Harry Wang is a Northwestern senior studying mathematics and computer science."
     />
-    <title>Hello</title>
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:title" content="Harry Wang" />
+    <meta
+      property="og:description"
+      content="Northwestern senior studying mathematics and computer science."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://harryo583.github.io/personal-website/" />
+    <title>Harry Wang</title>
   </head>
+
   <body>
-    <main>
-      <p class="eyebrow">Personal website</p>
-      <h1>Hello.</h1>
-      <p class="intro">I’m working on something new. Check back soon.</p>
-    </main>
+    <div class="page">
+      <header>
+        <a class="site-name" href="#top">Harry Wang</a>
+        <nav aria-label="External links">
+          <a href={githubUrl} target="_blank" rel="noreferrer">GitHub</a>
+          <a href={linkedinUrl} target="_blank" rel="noreferrer">LinkedIn</a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <h1>Harry Wang</h1>
+
+        <div class="intro">
+          <p>
+            I’m a senior at Northwestern studying math and computer science. I’m
+            interested in solving hard problems in artificial intelligence.
+          </p>
+
+          <p>
+            Previously, I’ve interned as a quantitative researcher at Valkyrie Trading and
+            Walleye Capital, working on options trading. Here’s my
+            {" "}<a href={githubUrl} target="_blank" rel="noreferrer">GitHub</a> and
+            {" "}<a href={linkedinUrl} target="_blank" rel="noreferrer">LinkedIn</a>.
+          </p>
+
+          <p>
+            On campus, I’ve served as an undergraduate teaching assistant for
+            Northwestern’s graduate deep learning course and for discrete math. I
+            also spent a year as head of research at NU Fintech.
+          </p>
+
+          <p>I play tennis, and I’m getting back into speedcubing.</p>
+        </div>
+
+        <section aria-labelledby="writing-heading">
+          <h2 id="writing-heading">Writing</h2>
+          <ul class="writing-list">
+            <li class="empty-writing">Posts coming soon.</li>
+          </ul>
+        </section>
+      </main>
+
+      <footer>
+        <p>Harry Wang</p>
+        <p>
+          <a href={linkedinUrl} target="_blank" rel="noreferrer">LinkedIn</a>
+          <span aria-hidden="true">·</span>
+          <a href={githubUrl} target="_blank" rel="noreferrer">GitHub</a>
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
